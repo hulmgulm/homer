@@ -91,7 +91,7 @@
                 :key="`service-${groupIndex}-${index}`"
                 :item="item"
                 :proxy="config.proxy"
-                :class="['column', `is-${12 / config.columns}`]"
+                :class="['column', `is-${12 / (group.columns ? group.columns : config.columns)}`]"
               />
             </template>
           </div>
@@ -102,7 +102,7 @@
             class="columns is-multiline layout-vertical"
           >
             <div
-              :class="['column', `is-${12 / config.columns}`]"
+              :class="['column', `is-${12 / (group.columns ? group.columns : config.columns)}`]"
               v-for="(group, groupIndex) in services"
               :key="groupIndex"
             >
