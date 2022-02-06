@@ -92,7 +92,7 @@
                 :proxy="config.proxy"
                 :class="[
                   'column',
-                  `is-${12 / config.columns}`,
+                  `is-${12 / (group.columns ? group.columns : config.columns)}`,
                   `${item.class || group.class || ''}`,
                 ]"
               />
@@ -107,7 +107,7 @@
             <div
               v-for="(group, groupIndex) in services"
               :key="groupIndex"
-              :class="['column', `is-${12 / config.columns}`]"
+              :class="['column', `is-${12 / (group.columns ? group.columns : config.columns)}`]"
             >
               <h2 v-if="group.name" class="group-title" :class="group.class">
                 <i v-if="group.icon" :class="['fa-fw', group.icon]"></i>
