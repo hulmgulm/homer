@@ -30,6 +30,9 @@
   <a href="https://github.com/bastienwirtz/homer/releases/latest/download/homer.zip"><img
   alt="Download homer static build"
   src="https://img.shields.io/badge/Download-homer.zip-orange"></a>
+ <a href="https://twitter.com/acdlite/status/974390255393505280"><img
+  alt="speed-blazing"
+  src="https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-red"></a>
  <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"><img
   alt="Awesome"
   src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
@@ -88,6 +91,10 @@ Install example configuration file & assets (favicons, ...) to help you get star
 
 * **`SUBFOLDER`** (default: `null`)
 If you would like to host Homer in a subfolder, (ex: *http://my-domain/**homer***), set this to the subfolder path (ex `/homer`).
+
+* **`PORT`** (default: `8080`)
+If you would like to change internal port of Homer from default `8080` to your port choice.
+
 
 #### With docker-compose
 
