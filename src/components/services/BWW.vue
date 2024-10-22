@@ -36,11 +36,12 @@
 export default {
   name: 'BWW',
   props: {
-    item: Object,
-    result: {
-      type: String,
-      default: "",
-    },
+    item: Object
+  },
+  data: () => {
+    return {
+      result:""
+    };
   },
   computed: {},
   methods: {
