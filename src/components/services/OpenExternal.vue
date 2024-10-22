@@ -15,13 +15,13 @@
             </div>
             <div class="media-content">
               <form
-                name="galleryForm"
-                v-on:submit.prevent="Gallery"
+                name="openExternalForm"
+                v-on:submit.prevent="openExternal"
                 autocomplete="off"
               >
                 <p class="title is-4">{{ item.name }}</p>
                 <p class="subtitle is-6 search-bar">
-                  <input name="gallery" type="text" />
+                  <input name="urlParameter" type="text" />
                 </p>
               </form>
             </div>
@@ -37,15 +37,19 @@
 
 <script>
 export default {
-  name: 'Gallery',
+  name: 'openExternal',
   props: {
     item: Object
   },
   computed: {},
   methods: {
-    Gallery(event) {
-      const code = event.target[0].value;
-      document.location = `${this.item.targetUrl}${code}`;
+    openExternal(event) {
+      const urlParameter = event.target[0].value;
+      if (this.item.targetUrl.includes('{urlParameter}')) {
+        document.location = this.item.targetUrl.replace('{urlParameter}', urlParameter);
+      } else {
+        document.location = `${this.item.targetUrl}${urlParameter}`;
+      }
     }
   }
 };
