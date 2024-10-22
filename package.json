@@ -6,6 +6,7 @@
     "dev": "vite",
     "mock": "http-server dummy-data/ --cors",
     "build": "vite build",
+    "build-nopwa": "vite build -c vite-nopwa.config.js",
     "preview": "vite preview --port 5050",
     "lint": "eslint . --fix"
   },
