@@ -1,6 +1,6 @@
 ---
 # Homepage configuration
-# See https://fontawesome.com/v5/search for icons options
+# See https://fontawesome.com/search for icons options
 
 title: "Demo dashboard"
 subtitle: "Homer"
@@ -51,7 +51,7 @@ services:
         icon: "fa-solid fa-download"
         subtitle: "Start using Homer in a few minutes"
         tag: "setup"
-        url: "https://github.com/bastienwirtz/homer?tab=readme-ov-file#getting-started"
+        url: "https://github.com/bastienwirtz/homer?tab=readme-ov-file#get-started"
       - name: "Configuration"
         icon: "fa-solid fa-sliders"
         subtitle: "Configuration options documentation"
@@ -66,13 +66,27 @@ services:
         icon: "fa-solid fa-palette"
         subtitle: "Displays dynamic information or actions."
         tag: "setup"
-        url: "https://github.com/bastienwirtz/homer/blob/main/docs/theming.md"
+        url: "https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md"
+      - name: "Dashboard icons"
+        icon: "fa-solid fa-icons"
+        tag: "setup"
+        url: ""
+        quick:
+          - name: "selfh.st"
+            url: "https://selfh.st/icons/"
+            icon: "fa-solid fa-arrow-up-right-from-square"
+            target: "_blank"
+          - name: "homarr-labs"
+            url: "https://github.com/homarr-labs/dashboard-icons"
+            icon: "fa-solid fa-arrow-up-right-from-square"
+            target: "_blank"
       - name: "Buy me a coffee!"
         subtitle: "Sponsor this project"
         icon: "fa-solid fa-mug-hot"
         url: "https://www.buymeacoffee.com/bastien"
   - name: "Smart cards showcase"
     icon: "fa-solid fa-brain"
+    class: "highlight-purple"
     items: 
       - name: "Octoprint"
         logo: "https://cdn-icons-png.flaticon.com/512/3112/3112529.png"
@@ -94,6 +108,12 @@ services:
         warning_value: 50
         danger_value: 80
         api_token: "xxxxxxxxxxxx"
+      - name: "PeaNUT"
+        logo: "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/peanut.png"
+        url: "https://github.com/Brandawg93/PeaNUT"
+        endpoint: "/dummy-data/peanut"
+        type: "PeaNUT"
+        device: "ups"
       - name: "Weather"
         location: "Lille"
         apikey: "xxxxxxxxxxxx" # insert your own API key here. Request one from https://openweathermap.org/api.
@@ -102,13 +122,21 @@ services:
         type: "OpenWeather"
   - name: "Ressources"
     icon: "fa-regular fa-bookmark"
+    class: highlight-inverted
     items:
-      - name: "r/selfhosted"
+      - name: "Selfhosted community"
         icon: "fa-brands fa-reddit-alien"
-        subtitle: "Bookmark example"
-        tag: "reddit"
-        url: "https://www.reddit.com/r/selfhosted/"
-        target: "_blank" 
+        tag: "community"
+        url: ""
+        quick:
+          - name: "r/selfhosted"
+            url: "https://www.reddit.com/r/selfhosted/"
+            icon: "fa-solid fa-arrow-up-right-from-square"
+            target: "_blank"
+          - name: "c/selfhosted"
+            url: "https://lemmy.world/c/selfhosted"
+            icon: "fa-solid fa-arrow-up-right-from-square"
+            target: "_blank"
       - name: "Awesome selfhosted"
         icon: "fa-solid fa-star"
         subtitle: "Another application"

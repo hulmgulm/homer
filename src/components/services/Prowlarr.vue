@@ -22,13 +22,9 @@
 
 <script>
 import service from "@/mixins/service.js";
-import Generic from "./Generic.vue";
 
 export default {
   name: "Prowlarr",
-  components: {
-    Generic,
-  },
   mixins: [service],
   props: {
     item: Object,
@@ -41,6 +37,11 @@ export default {
     };
   },
   created: function () {
+    const checkInterval = parseInt(this.item.checkInterval, 10) || 0;
+    if (checkInterval > 0) {
+      setInterval(() => this.fetchConfig(), checkInterval);
+    }
+
     this.fetchConfig();
   },
   methods: {
